@@ -4,7 +4,10 @@
     "description": "A lorem ipsum generator that uses lyrics by The Tragically Hip",
     "author": "James Rae",
     "homepage": "https://github.com/james-rae/tragically-hipsum",
-    "repository": "github:james-rae/tragically-hipsum",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/james-rae/tragically-hipsum.git"
+    },
     "keywords": [],
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
