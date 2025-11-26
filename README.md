@@ -27,11 +27,72 @@ A javascript lorem ipsum library that generates text using song lyrics by [The T
 - Currently only has lyrics for the classic studio releases. Bonus tracks may be added later.
 - Similar lyrics with minor variations may be omitted.
 - Find a type-o? Feel free to log an issue.
-- Some funny punctuation may appear around quoted text, typicially a period after the quote. E.g. `You just said, "Oh, wow.".`
+- Some funny punctuation may appear around quoted text, typicially a period after the quote.
+  - E.g. `You just said, "Oh, wow.".`
 
 ## Adding the Library to a Project
 
-TODO list ways to add it.  Via npm. Via cdn. Via release files.  Outline different dist types and what they do.
+### Via NPM
+
+The library is hosted on [NPM](https://www.npmjs.com/package/tragically-hipsum). Add it to your project.
+
+```text
+$ npm install tragically-hipsum
+```
+
+Then import the library in your scripts and use it.
+
+```js
+// "hip" can be switched to any name you please
+import hip from 'tragically-hipsum';
+
+console.log(hip.lines(2));
+```
+
+### Local Files
+
+You can host the library as files inside your project. Built javascript files can be found in the [Releases](https://github.com/james-rae/tragically-hipsum/releases) section. Alternately, one can clone this repo and build themselves (`npm run build`). The result will be in the `dist` folder.
+
+**As ES Modules**
+
+```js
+// "hip" can be switched to any name you please
+// "index.mjs" file can be renamed, its all good
+import hip from 'path/to/index.mjs';
+
+console.log(hip.lines(2));
+```
+
+**As IIFE Global**
+
+```html
+<script src="path/to/index.iife.js"></script>
+```
+
+```js
+// the iife version will use "hip" as the global name of the library
+console.log(hip.lines(2));
+```
+
+### Via CDN
+
+The library can be linked as a script from popular CDNs.
+
+```text
+https://unpkg.com/tragically-hipsum@1.0.0/dist/index.iife.js
+https://cdn.jsdelivr.net/npm/tragically-hipsum@1.0.0/dist/index.iife.js
+```
+
+> [!TIP]
+> This approach will pull all the lyrics down from the internet, and will be slowest (especially for local development).
+
+```html
+<script src="https://unpkg.com/tragically-hipsum@1.0.0/dist/index.iife.js"></script>
+```
+
+```js
+console.log(hip.lines(2));
+```
 
 ## Using the Library
 
@@ -103,8 +164,6 @@ hip.pMaxLines = 12;
 hip.para(3); // this is now the equivalent of .para(3, 5, 12)
 ```
 
-
-
 ## Developer Stuff
 
 The following tasks are available:
@@ -118,9 +177,8 @@ The following tasks are available:
 
 This template builds multiple distribution formats:
 
-- **ESM** (`dist/index.es.js`) - Modern ES modules
-- **CommonJS** (`dist/index.cjs.js`) - Node.js compatibility
-- **UMD** (`dist/index.umd.js`) - Universal module definition
+- **ESM** (`dist/index.mjs`) - Modern ES modules
+- **CommonJS** (`dist/index.cjs`) - Node.js compatibility
 - **IIFE** (`dist/index.iife.js`) - Browser global variable
 - **Types** (`dist/index.d.ts`) - Bundled TypeScript declaration file
 
