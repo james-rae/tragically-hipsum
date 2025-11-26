@@ -1,0 +1,38 @@
+{
+    "name": "tragically-hipsum",
+    "version": "0.0.1",
+    "description": "A lorem ipsum generator that uses lyrics by The Tragically Hip",
+    "author": "James Rae",
+    "homepage": "https://github.com/james-rae/tragically-hipsum",
+    "repository": "github:james-rae/tragically-hipsum",
+    "keywords": [],
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs",
+            "default": "./dist/index.mjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite build --watch",
+        "start": "vite --host --open",
+        "build": "vite build"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+        "@types/node": "^24.7.0",
+        "prettier": "^3.2.4",
+        "tslib": "^2.8.1",
+        "typescript": "^5.9.3",
+        "vite": "^7.1.9",
+        "vite-plugin-dts": "^4.5.4"
+    }
+}
