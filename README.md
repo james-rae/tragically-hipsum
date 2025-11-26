@@ -1,11 +1,8 @@
 # Tragically Hipsum
 
-> [!WARNING]
-> This is still in beta. Needs a bit more mucking about.
-
 A javascript lorem ipsum library that generates text using song lyrics by [The Tragically Hip](https://thehip.com/).
 
-[Demo Page](http://google.ca)
+[Demo Page](https://james-rae.github.io/tragically-hipsum/demo/)
 
 ### Contents
 
@@ -14,6 +11,7 @@ A javascript lorem ipsum library that generates text using song lyrics by [The T
 - [Adding the Library to a Project](#adding-the-library-to-a-project)
 - [Using the Library](#using-the-library)
 - [Developer Stuff](#developer-stuff)
+- [License](#license)
 
 ## Credits
 
@@ -182,3 +180,8 @@ This template builds multiple distribution formats:
 - **IIFE** (`dist/index.iife.js`) - Browser global variable
 - **Types** (`dist/index.d.ts`) - Bundled TypeScript declaration file
 
+## License
+
+Given this is chock full of content that falls under copywrights, and I'm not a lawyer, I'm in no position to "license" anything.
+
+Use it for filler in the your own projects. Fork and adjust if you want. Really suggest this doesn't get put into anything remotely commercial, eh.
